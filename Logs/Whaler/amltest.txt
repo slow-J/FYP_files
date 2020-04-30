@@ -1,0 +1,57 @@
+2020-03-18 13:04:07,383 - WARNING - error - No route found for IPv6 destination :: (no default route?)
+2020-03-18 13:04:07,515 - INFO - Whaler - Initialising Whaler
+2020-03-18 13:04:07,516 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,516 - DEBUG - config - No config file found
+2020-03-18 13:04:07,517 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,517 - DEBUG - config - No config file found
+2020-03-18 13:04:07,517 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,517 - DEBUG - config - No config file found
+2020-03-18 13:04:07,517 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,517 - DEBUG - config - No config file found
+2020-03-18 13:04:07,518 - INFO - FingerprintService - Intialised known Fingerprint set [0] items
+2020-03-18 13:04:07,518 - INFO - Whaler - Starting Whaler
+2020-03-18 13:04:07,519 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,519 - DEBUG - config - No config file found
+2020-03-18 13:04:07,519 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,519 - DEBUG - config - No config file found
+2020-03-18 13:04:07,519 - DEBUG - BaseContainer - Getting container [whaler_victim] 
+2020-03-18 13:04:07,521 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/whaler_victim/json HTTP/1.1" 404 47
+2020-03-18 13:04:07,522 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,522 - DEBUG - config - No config file found
+2020-03-18 13:04:07,522 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,522 - DEBUG - config - No config file found
+2020-03-18 13:04:07,522 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,522 - DEBUG - config - No config file found
+2020-03-18 13:04:07,522 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:07,522 - DEBUG - config - No config file found
+2020-03-18 13:04:07,523 - DEBUG - BaseContainer - Getting container [whaler_capture] 
+2020-03-18 13:04:07,524 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/whaler_capture/json HTTP/1.1" 200 None
+2020-03-18 13:04:07,525 - DEBUG - VictimContainer - Deploying new VictimContainer [whaler_victim]
+2020-03-18 13:04:07,549 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/containers/create?name=whaler_victim HTTP/1.1" 201 90
+2020-03-18 13:04:07,551 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/3635b8d34229272ef5da557163e32a2ecfca46c376a538fefc622ff7e397419e/json HTTP/1.1" 200 None
+2020-03-18 13:04:08,009 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/containers/3635b8d34229272ef5da557163e32a2ecfca46c376a538fefc622ff7e397419e/start HTTP/1.1" 204 0
+2020-03-18 13:04:08,010 - DEBUG - VictimContainer - waiting 10 seconds for container to stabilise and baseline for file changes...
+2020-03-18 13:04:18,135 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/3635b8d34229272ef5da557163e32a2ecfca46c376a538fefc622ff7e397419e/changes HTTP/1.1" 200 1221
+2020-03-18 13:04:18,135 - INFO - VictimContainer - deployed new container [whaler_victim]
+2020-03-18 13:04:18,253 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/3635b8d34229272ef5da557163e32a2ecfca46c376a538fefc622ff7e397419e/changes HTTP/1.1" 200 1221
+2020-03-18 13:04:18,254 - DEBUG - BaseContainer - Removing container [whaler_capture]
+2020-03-18 13:04:28,436 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/containers/c7d4d8a7716b63435d4fdb6262195bab6bbfb42b924f137136ad8d364186abd2/stop HTTP/1.1" 204 0
+2020-03-18 13:04:28,448 - DEBUG - connectionpool - http://localhost:None "DELETE /v1.35/containers/c7d4d8a7716b63435d4fdb6262195bab6bbfb42b924f137136ad8d364186abd2?force=True&link=False&v=False HTTP/1.1" 204 0
+2020-03-18 13:04:28,448 - INFO - BaseContainer - removed cotaniner [whaler_capture]
+2020-03-18 13:04:28,458 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/volumes/prune HTTP/1.1" 200 112
+2020-03-18 13:04:28,458 - DEBUG - CaptureContainer - Deploying new Capture container [whaler_capture]
+2020-03-18 13:04:28,498 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/containers/create?name=whaler_capture HTTP/1.1" 201 90
+2020-03-18 13:04:28,500 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/10e956e189cf155e696b52fba8964e098fd489befbc1c90d03c0751cc63d2a55/json HTTP/1.1" 200 None
+2020-03-18 13:04:28,597 - DEBUG - connectionpool - http://localhost:None "POST /v1.35/containers/10e956e189cf155e696b52fba8964e098fd489befbc1c90d03c0751cc63d2a55/start HTTP/1.1" 204 0
+2020-03-18 13:04:28,597 - INFO - CaptureContainer - deployed new container [whaler_capture]
+2020-03-18 13:04:28,598 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:28,598 - DEBUG - config - No config file found
+2020-03-18 13:04:28,598 - DEBUG - config - Trying paths: ['/root/.docker/config.json', '/root/.dockercfg']
+2020-03-18 13:04:28,598 - DEBUG - config - No config file found
+2020-03-18 13:04:28,599 - DEBUG - BaseContainer - Getting container [whaler_logging] 
+2020-03-18 13:04:28,600 - DEBUG - connectionpool - http://localhost:None "GET /v1.35/containers/whaler_logging/json HTTP/1.1" 404 48
+2020-03-18 13:04:28,601 - INFO - LoggingContainer - No Logzio API key found, cannot setup logging module
+2020-03-18 13:04:28,601 - INFO - VictimContainer - Daemon Event Listener Started
+2020-03-18 13:04:28,602 - DEBUG - connectionpool - Starting new HTTP connection (1): whaler_victim:2375
+2020-03-18 13:04:28,604 - DEBUG - connectionpool - http://whaler_victim:2375 "GET /v1.35/events HTTP/1.1" 200 None
+2020-03-18 13:04:28,604 - INFO - VictimContainer - VictimContainer: Connected and streaming Daemon events
